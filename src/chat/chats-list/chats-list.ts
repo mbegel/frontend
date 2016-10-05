@@ -24,6 +24,7 @@ export class ChatsListComponent {
         this.allChats = [];
         this.displayedChats = [];
         this.getChats();
+        this.getChatMembers();
         this.search = false;
         this.add = false;
     };
@@ -32,6 +33,12 @@ export class ChatsListComponent {
         this.api.store.findAll('chat').then(res => {
             this.allChats = res;
             this.displayedChats = res;
+        });
+    }
+
+    getChatMembers() {
+        this.api.store.findAll('chatmember', { 'user': this.api.me.id }).then(res => {
+            this.api.me.chatmembers = res;
         });
     }
 

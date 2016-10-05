@@ -36,6 +36,18 @@ export class User extends Record {
     public getClusters(): Cluster[] {
         return _.reduce(this.user_clusters, c => c['cluster'], []);
     }
+
+    // Returns the role on the specified chat
+    public getChatMemberOnChat(chat_id: int): ChatMember {
+        //console.log("Begin of the getChatMemberOnChat fonction, for chat_id = " + chat_id);
+        for (var chatmember of this.chatmembers) {
+            //console.log(chatmember);
+            if(chatmember.chat.id === chat_id) {
+                return chatmember;
+            };
+        };
+        return null;
+    }
 }
 
 export class UserCluster extends Record {

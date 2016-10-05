@@ -3,6 +3,8 @@
         <div>
             <a [routerLink]="['/Chat/Details', {id: chat.id}]">
                 <strong>&nbsp;{{ chat.name }}</strong>
+                <span *ngIf="!user.getChatMemberOnChat(chat.id).is_member" class="">Vous ne suivez plus cette conversation.</span>
+                <span *ngIf="user.getChatMemberOnChat(chat.id).is_banned" class="">Vous avez été banni de cette conversation.</span>
             </a>
         </div>
     </div>

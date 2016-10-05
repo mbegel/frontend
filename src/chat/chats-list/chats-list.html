@@ -23,8 +23,7 @@
         </div>
     </div>
 </div>
-
 <div class="expanded columns">
-    <chat-inline-display *ngFor="let chat of displayedChats" [chat]="chat"></chat-inline-display>
+    <chat-inline-display *ngFor="let chat of displayedChats" [chat]="chat" [user]="api.me"></chat-inline-display>
 </div>
 <hr>

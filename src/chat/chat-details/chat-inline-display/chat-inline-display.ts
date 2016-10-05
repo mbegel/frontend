@@ -11,5 +11,5 @@ import {Chat} from '../../../shared/resources/chat';
 })
 export class ChatInlineDisplayComponent {
     @Input('chat') chat: Chat;
-
+    @Input('user') user: User;
 }

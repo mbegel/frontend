@@ -134,7 +134,9 @@ export class ChatDisplayComponent {
             ).then(
             (res) => {
                 console.log(res);
+                this.chat.name = res.data.name;
                 console.log('Nom du chat modifié.');
+                this.newChatName = '';
         });
     }
 
