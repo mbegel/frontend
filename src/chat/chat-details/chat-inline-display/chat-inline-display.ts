@@ -3,6 +3,7 @@ import {NgIf} from 'angular2/common';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {Chat} from '../../../shared/resources/chat';
+import {User} from '../../../shared/resources/user';
 
 @Component({
     selector: 'chat-inline-display',

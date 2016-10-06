@@ -38,7 +38,7 @@ export class User extends Record {
     }
 
     // Returns the role on the specified chat
-    public getChatMemberOnChat(chat_id: int): ChatMember {
+    public getChatMemberOnChat(chat_id: number): ChatMember {
         //console.log("Begin of the getChatMemberOnChat fonction, for chat_id = " + chat_id);
         for (var chatmember of this.chatmembers) {
             //console.log(chatmember);
